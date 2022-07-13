@@ -44,26 +44,10 @@ def check_rectified_linear_unit_derivative():
         
     print(green("PASS"), ": ReLU derivative Implemented.")
     
-
-def check_output_layer_activation():
-    try:
-        x = 1.
-        nn.output_layer_activation(x)
-    except NotImplementedError:
-        print(yellow("FAIL"), ": Output activation layer not implemented!")
-
-def output_layer_activation_derivative():
-    try:
-        x = 1.
-        nn.output_layer_activation_derivative(x)
-    except NotImplementedError:
-        print(yellow("FAIL"), ": Output activation layer derivative not implemented!")
     
 def main():
     check_rectified_linear_unit()
     check_rectified_linear_unit_derivative()
-    check_output_layer_activation()
-    output_layer_activation_derivative()
     
 if __name__ == "__main__":
     main()
